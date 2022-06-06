@@ -1,0 +1,90 @@
+.main-container{
+    text-align: center;
+    padding: 2.5em;
+    .title{
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-size: 3.5em;
+        color: $DarkGrayishRed;
+        font-weight: 400;
+        margin: 0.5em 0em;
+        .were{
+            font-weight: 300;
+            background: $Linear2;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .subitle{
+        line-height: 1.5em;
+        color: $DesaturatedRed;
+    }
+
+    .form-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 2.2em;
+        margin-bottom: 1em;
+        
+        .input {
+            width: 100%;
+            outline: none;
+            padding: 1em;
+            border-radius: 20px;
+            
+            background-color: transparent;
+            &::placeholder{
+                color:$DesaturatedRed;
+            }
+        }
+
+        .ativeError{
+            border: 1px solid $SoftRed;
+        }
+
+        .inativeError{
+            border: 1px solid $DesaturatedRed;
+        }
+
+        .btn {
+            background-image: $Linear2;
+            margin-left: -50px;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 5px $DesaturatedRed;
+            cursor: pointer;
+           
+            .arrow {
+                width: 50%;
+            }
+        }
+    }
+
+    .msgError {
+        color: $SoftRed;
+    }
+
+    .msgSuccess {
+        color: hsl(154, 59%, 51%);
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .main-container{
+        text-align: left;
+       .title{
+        font-size: 5em;
+       }
+       .subitle{
+        font-size: 1.5em;
+        }
+        .msgError, .msgSuccess {
+            margin-left: 15px;
+        }
+    }
+    
+}

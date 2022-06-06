@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import './colors';
+@import './left';
+@import './right';
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    .bg-img-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .app{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        
+        .bg-img-desktop {
+            display: block;
+        }
+
+        .hero-container{
+            .bg-img-mobile{
+                display: none;
+            }
+        }
+    }
+}
