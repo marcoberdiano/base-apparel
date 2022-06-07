@@ -29,25 +29,37 @@
         margin-top: 2.2em;
         margin-bottom: 1em;
         
-        .input {
+        .input-container{
             width: 100%;
-            outline: none;
-            padding: 1em;
-            border-radius: 20px;
+            display: flex;
+            align-items: center;
             
-            background-color: transparent;
-            &::placeholder{
-                color:$DesaturatedRed;
+            .input {
+                width: 100%;
+                outline: none;
+                padding: 1em;
+                border-radius: 20px;
+                
+                background-color: transparent;
+                &::placeholder{
+                    color:$DesaturatedRed;
+                }
+            }
+
+            .icon-error{
+                margin-left: -85px;
+            }
+    
+            .ativeError{
+                border: 1px solid $SoftRed;
+            }
+    
+            .inativeError{
+                border: 1px solid $DesaturatedRed;
             }
         }
-
-        .ativeError{
-            border: 1px solid $SoftRed;
-        }
-
-        .inativeError{
-            border: 1px solid $DesaturatedRed;
-        }
+        
+        
 
         .btn {
             background-image: $Linear2;
@@ -69,7 +81,9 @@
     }
 
     .msgSuccess {
-        color: hsl(154, 59%, 51%);
+        background: $Linear2;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 

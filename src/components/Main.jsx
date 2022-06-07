@@ -1,5 +1,6 @@
 import arrow from '../images/icon-arrow.svg';
 import { useState } from 'react';
+import iconError from '../images/icon-error.svg';
 
 const Main = () => {
     
@@ -44,13 +45,25 @@ const Main = () => {
             </p>
             
             <form onSubmit={handleSubmit} className='form-container'>
-                <input onChange={handleEmail} type="text" name="email" value={email} className={`input ${error ? 'ativeError':'inativeError'}`} placeholder='Email Address'/>
+
+                <div className='input-container'>
+                    <input 
+                        onChange={handleEmail} 
+                        type="text" 
+                        name="email" 
+                        value={email} 
+                        className={`input ${error ? 'ativeError':'inativeError'}`} 
+                        placeholder='Email Address'
+                    />
+                    {error && <img src={iconError} className='icon-error' alt="icon error" />}
+                </div>
+                
                 <button type="submit" className='btn'>
                     <img src={arrow} alt="arrow" />
                 </button>
             </form>
             { error && <p className='msgError'>Please provide a valid email</p>}
-            { submit && <p className='msgSuccess'>We're counting on you!</p>}
+            { submit && <p className='msgSuccess'>We received your email!</p>}
            
         </div>
      );

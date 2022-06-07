@@ -42,20 +42,28 @@
   margin-top: 2.2em;
   margin-bottom: 1em;
 }
-.main-container .form-container .input {
+.main-container .form-container .input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-container .form-container .input-container .input {
   width: 100%;
   outline: none;
   padding: 1em;
   border-radius: 20px;
   background-color: transparent;
 }
-.main-container .form-container .input::placeholder {
+.main-container .form-container .input-container .input::placeholder {
   color: hsl(0deg, 36%, 70%);
 }
-.main-container .form-container .ativeError {
+.main-container .form-container .input-container .icon-error {
+  margin-left: -85px;
+}
+.main-container .form-container .input-container .ativeError {
   border: 1px solid hsl(0deg, 93%, 68%);
 }
-.main-container .form-container .inativeError {
+.main-container .form-container .input-container .inativeError {
   border: 1px solid hsl(0deg, 36%, 70%);
 }
 .main-container .form-container .btn {
@@ -74,7 +82,9 @@
   color: hsl(0deg, 93%, 68%);
 }
 .main-container .msgSuccess {
-  color: hsl(154deg, 59%, 51%);
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (min-width: 1300px) {
@@ -93,7 +103,9 @@
 }
 @media only screen and (min-width: 1300px) {
   .app-left {
-    margin: 0em 5em;
+    padding: 0em 5em;
+    background-image: url("../../images/bg-pattern-desktop.svg");
+    background-size: cover;
   }
 }
 @media only screen and (min-width: 1300px) {
